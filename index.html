@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO Bank ATM | Advanced Simulation</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="atm-machine">
+        <div class="atm-panel">
+
+            <div class="screen-area">
+                <div class="atm-screen" id="atmScreen">
+
+                    <div class="balance-badge" id="balanceLabel">
+                        🏦 NEO BANK • READY
+                    </div>
+
+                    <div id="dynamicMessage" class="message-area">
+                        💳 INSERT CARD & ENTER PIN
+                    </div>
+
+                    <div id="pinDisplay" class="pin-indicator">
+                        ⚬ ⚬ ⚬ ⚬
+                    </div>
+
+                    <div id="amountInputArea" style="display: none;"></div>
+
+                    <div id="actionMenu" style="margin-top: 12px;"></div>
+
+                    <div class="menu-grid" id="optionsMenu"></div>
+
+                </div>
+            </div>
+
+            <div class="interaction-zone">
+
+                <div class="keypad">
+                    <div class="keypad-grid" id="keypadContainer">
+
+                        <button class="key" data-num="1">1</button>
+                        <button class="key" data-num="2">2</button>
+                        <button class="key" data-num="3">3</button>
+
+                        <button class="key" data-num="4">4</button>
+                        <button class="key" data-num="5">5</button>
+                        <button class="key" data-num="6">6</button>
+
+                        <button class="key" data-num="7">7</button>
+                        <button class="key" data-num="8">8</button>
+                        <button class="key" data-num="9">9</button>
+
+                        <button class="key special-key" id="clearPinBtn">
+                            CLEAR
+                        </button>
+
+                        <button class="key" data-num="0">0</button>
+
+                        <button class="key special-key" id="enterPinBtn">
+                            ✔ ENTER
+                        </button>
+
+                    </div>
+
+                    <div class="keypad-caption">
+                        ◄ secure keypad ►
+                    </div>
+                </div>
+
+                <div class="card-area">
+
+                    <div class="card-slot">
+                        🏧 ⟡ CARD READER ⟡
+                    </div>
+
+                    <button class="card-button" id="insertCardBtn">
+                        💳 INSERT CARD
+                    </button>
+
+                    <button class="card-button exit-btn" id="ejectCardBtn">
+                        ⏏️ EJECT CARD / EXIT
+                    </button>
+
+                    <div class="default-pin">
+                        Default PIN: 1234
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
